@@ -1,0 +1,46 @@
+@import "../shared-assignment.css";
+
+body {
+    background: var(--theme-background, linear-gradient(180deg, #fbf8f2 0%, #f6f1e8 100%));
+}
+
+.theme-values {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.theme-values li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface-solid);
+}
+
+.value-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.preview-card {
+    display: grid;
+    gap: 14px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface-solid);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7 - Dynamic Table Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 7</p>
+            <h1>Dynamic Table Generator</h1>
+            <p class="page-note">The table is generated from row and column inputs, then controlled with add-row, delete-row, and even-row highlight actions.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <form id="generatorForm" class="panel stack">
+                <p class="section-title">Table setup</p>
+                <div class="field-grid">
+                    <label class="field">
+                        Rows
+                        <input type="number" id="rowCount" min="1" placeholder="3" required>
+                    </label>
+                    <label class="field">
+                        Columns
+                        <input type="number" id="columnCount" min="1" placeholder="4" required>
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button type="submit">Generate table</button>
+                    <button type="button" id="addRow" class="secondary">Add row</button>
+                    <button type="button" id="deleteRow" class="secondary">Delete row</button>
+                    <button type="button" id="highlightRows" class="ghost">Highlight even rows</button>
+                </div>
+
+                <p id="tableMessage" class="message">Choose rows and columns, then generate a table.</p>
+            </form>
+
+            <section class="panel stack">
+                <p class="section-title">Generated output</p>
+                <p id="tablePlaceholder" class="empty-state">No table generated yet.</p>
+                <div id="tableWrap" class="table-wrap" hidden>
+                    <table id="dynamicTable" class="generated-table"></table>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

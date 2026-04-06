@@ -1,0 +1,24 @@
+@import "../shared-assignment.css";
+
+.clock-face,
+.timer-face {
+    display: grid;
+    gap: 8px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface-solid);
+    text-align: center;
+}
+
+.clock-face strong,
+.timer-face strong {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: clamp(2.1rem, 5vw, 3.5rem);
+    font-variant-numeric: tabular-nums;
+}
+
+.clock-face span,
+.timer-face span {
+    color: var(--muted);
+}

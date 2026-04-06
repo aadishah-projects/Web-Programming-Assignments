@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Smart Calculator with History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 1</p>
+            <h1>Smart Calculator with History</h1>
+            <p class="page-note">A stripped-back calculator that uses two number fields, stores the latest five calculations in an array, and handles invalid cases like division by zero.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <form id="calculatorForm" class="panel stack">
+                <p class="section-title">Calculate</p>
+                <div class="field-grid">
+                    <label class="field">
+                        First number
+                        <input type="number" id="firstValue" step="any" placeholder="12" required>
+                    </label>
+                    <label class="field">
+                        Operation
+                        <select id="operator" required>
+                            <option value="+">Addition (+)</option>
+                            <option value="-">Subtraction (-)</option>
+                            <option value="*">Multiplication (*)</option>
+                            <option value="/">Division (/)</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        Second number
+                        <input type="number" id="secondValue" step="any" placeholder="4" required>
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button type="submit">Calculate</button>
+                    <button type="button" id="resetInputs" class="secondary">Reset inputs</button>
+                </div>
+
+                <div class="metric-grid">
+                    <article class="metric">
+                        <span>Result</span>
+                        <strong id="resultValue">--</strong>
+                    </article>
+                    <article class="metric">
+                        <span>Status</span>
+                        <strong><span id="statusBadge" class="status status-warn">Waiting</span></strong>
+                    </article>
+                </div>
+
+                <p id="calculatorMessage" class="message">Enter two numbers and choose an operator.</p>
+            </form>
+
+            <section class="panel stack">
+                <div class="header-row">
+                    <p class="section-title">Last 5 calculations</p>
+                    <button type="button" id="clearHistory" class="secondary">Clear history</button>
+                </div>
+                <ul id="historyList" class="history-list"></ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

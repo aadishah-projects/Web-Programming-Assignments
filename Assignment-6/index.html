@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6 - Digital Clock and Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 6</p>
+            <h1>Digital Clock and Countdown Timer</h1>
+            <p class="page-note">The clock updates every second, while the timer accepts user input in minutes and seconds, counts down, and alerts when it reaches zero.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <section class="panel stack">
+                <p class="section-title">Real-time clock</p>
+                <div class="clock-face">
+                    <strong id="clockTime">00:00:00</strong>
+                    <span id="clockDate">Loading date...</span>
+                </div>
+            </section>
+
+            <section class="panel stack">
+                <p class="section-title">Countdown timer</p>
+                <div class="timer-face">
+                    <strong id="timerDisplay">00:00</strong>
+                    <span>Set the timer and press start.</span>
+                </div>
+
+                <form id="timerForm" class="stack">
+                    <div class="field-grid">
+                        <label class="field">
+                            Minutes
+                            <input type="number" id="minutesInput" min="0" placeholder="1">
+                        </label>
+                        <label class="field">
+                            Seconds
+                            <input type="number" id="secondsInput" min="0" max="59" placeholder="30">
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit">Start</button>
+                        <button type="button" id="pauseTimer" class="secondary">Pause</button>
+                        <button type="button" id="resetTimer" class="ghost">Reset</button>
+                    </div>
+                </form>
+
+                <p id="timerMessage" class="message">Timer is ready.</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

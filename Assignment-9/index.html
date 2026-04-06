@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 9 - Form Validation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 9</p>
+            <h1>Form Validation System</h1>
+            <p class="page-note">This form validates name, email, and password in real time, shows dynamic error messages, and blocks submission until every field is valid.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <form id="validationForm" class="panel stack" novalidate>
+                <p class="section-title">Registration form</p>
+
+                <div class="field-block">
+                    <label class="field">
+                        Name
+                        <input type="text" id="nameInput" placeholder="Aditya Kumar Shah">
+                    </label>
+                    <p id="nameMessage" class="message"></p>
+                </div>
+
+                <div class="field-block">
+                    <label class="field">
+                        Email
+                        <input type="email" id="emailInput" placeholder="name@example.com">
+                    </label>
+                    <p id="emailMessage" class="message"></p>
+                </div>
+
+                <div class="field-block">
+                    <label class="field">
+                        Password
+                        <input type="password" id="passwordInput" placeholder="At least 8 characters">
+                    </label>
+                    <p id="passwordMessage" class="message"></p>
+                </div>
+
+                <div class="actions">
+                    <button type="submit">Submit form</button>
+                    <button type="reset" class="secondary">Reset</button>
+                </div>
+
+                <p id="formMessage" class="message">Validation runs while you type.</p>
+            </form>
+
+            <section class="panel stack">
+                <p class="section-title">Validation rules</p>
+                <ul class="list">
+                    <li class="item-card">Name must contain at least 2 alphabetic characters.</li>
+                    <li class="item-card">Email must match a valid email pattern.</li>
+                    <li class="item-card">Password must be at least 8 characters with uppercase, lowercase, and a number.</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

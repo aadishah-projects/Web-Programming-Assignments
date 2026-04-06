@@ -1,0 +1,10 @@
+@import "../shared-assignment.css";
+
+.generated-table th,
+.generated-table td {
+    text-align: center;
+}
+
+.even-row td {
+    background: #edf3ee;
+}

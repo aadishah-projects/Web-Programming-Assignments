@@ -1,0 +1,14 @@
+@import "../shared-assignment.css";
+
+.field-block {
+    display: grid;
+    gap: 4px;
+}
+
+.is-valid {
+    border-color: var(--success);
+}
+
+.is-invalid {
+    border-color: var(--danger);
+}

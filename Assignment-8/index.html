@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8 - Simple E-Commerce Cart System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 8</p>
+            <h1>Simple E-Commerce Cart System</h1>
+            <p class="page-note">Products are stored as objects, items can be added or removed, quantities can change, and totals update automatically with a lean cart layout.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <section class="panel stack">
+                <p class="section-title">Products</p>
+                <div id="productList" class="catalog"></div>
+            </section>
+
+            <section class="panel stack">
+                <div class="header-row">
+                    <p class="section-title">Cart</p>
+                    <button type="button" id="clearCart" class="secondary">Clear cart</button>
+                </div>
+
+                <div class="metric-grid">
+                    <article class="metric">
+                        <span>Items</span>
+                        <strong id="cartItems">0</strong>
+                    </article>
+                    <article class="metric">
+                        <span>Total</span>
+                        <strong id="cartTotal">$0.00</strong>
+                    </article>
+                </div>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody"></tbody>
+                    </table>
+                </div>
+
+                <p id="cartMessage" class="message">Add a product to begin.</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

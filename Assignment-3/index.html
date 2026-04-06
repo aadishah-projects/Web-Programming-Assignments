@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Dynamic To-Do List with Status Filter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 3</p>
+            <h1>Dynamic To-Do List with Status Filter</h1>
+            <p class="page-note">Tasks are stored in an array, rendered dynamically, and filtered between all, pending, and completed states with a minimal checklist layout.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <section class="panel stack">
+                <form id="taskForm" class="stack">
+                    <p class="section-title">Add a task</p>
+                    <label class="field">
+                        Task title
+                        <input type="text" id="taskInput" placeholder="Prepare the lab report" required>
+                    </label>
+                    <div class="actions">
+                        <button type="submit">Add task</button>
+                        <button type="button" id="clearCompleted" class="secondary">Clear completed</button>
+                    </div>
+                </form>
+
+                <div class="pill-row">
+                    <button type="button" class="pill active" data-filter="all">All</button>
+                    <button type="button" class="pill" data-filter="pending">Pending</button>
+                    <button type="button" class="pill" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="metric-grid">
+                    <article class="metric">
+                        <span>Total tasks</span>
+                        <strong id="totalTasks">0</strong>
+                    </article>
+                    <article class="metric">
+                        <span>Completed</span>
+                        <strong id="completedTasks">0</strong>
+                    </article>
+                    <article class="metric">
+                        <span>Pending</span>
+                        <strong id="pendingTasks">0</strong>
+                    </article>
+                </div>
+
+                <p id="taskMessage" class="message">Add a task and use the filter to change the view.</p>
+            </section>
+
+            <section class="panel stack">
+                <p class="section-title">Task list</p>
+                <ul id="taskList" class="task-list"></ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

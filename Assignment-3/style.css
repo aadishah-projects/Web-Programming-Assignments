@@ -1,0 +1,33 @@
+@import "../shared-assignment.css";
+
+.task-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.task-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.task-main input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.task-copy {
+    display: grid;
+    gap: 4px;
+}
+
+.task-copy.done strong {
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.task-copy span {
+    color: var(--muted);
+    font-size: 0.9rem;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10 - Event-Driven Color and Theme Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 10</p>
+            <h1>Event-Driven Color and Theme Manager</h1>
+            <p class="page-note">Theme values are stored in an object, color inputs update the page and preview instantly, and one reset action restores the default palette.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <form id="themeForm" class="panel stack">
+                <p class="section-title">Theme controls</p>
+
+                <div class="field-grid">
+                    <label class="field">
+                        Background color
+                        <input type="color" id="backgroundColor">
+                    </label>
+                    <label class="field">
+                        Text color
+                        <input type="color" id="textColor">
+                    </label>
+                    <label class="field">
+                        Button color
+                        <input type="color" id="buttonColor">
+                    </label>
+                </div>
+
+                <div class="actions">
+                    <button type="button" id="resetTheme" class="secondary">Reset theme</button>
+                </div>
+
+                <ul id="themeValues" class="theme-values"></ul>
+                <p id="themeMessage" class="message">Adjust the colors to update the page and preview.</p>
+            </form>
+
+            <section class="panel stack">
+                <p class="section-title">Live preview</p>
+                <article id="previewCard" class="preview-card">
+                    <h2>Preview block</h2>
+                    <p>This sample shows the current background, text, and button colors.</p>
+                    <div class="actions">
+                        <button type="button" id="previewButton">Preview button</button>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

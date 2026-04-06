@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4 - Number Guessing Game with Score Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 4</p>
+            <h1>Number Guessing Game with Score Tracking</h1>
+            <p class="page-note">A minimal guessing game where the system generates a number from 1 to 100, gives high or low feedback, and reduces the score after each wrong attempt.</p>
+        </section>
+
+        <section class="workspace grid-two">
+            <section class="panel stack">
+                <div class="header-row">
+                    <p class="section-title">Play</p>
+                    <span id="gameStatus" class="status status-warn">In progress</span>
+                </div>
+
+                <div class="metric-grid">
+                    <article class="metric">
+                        <span>Score</span>
+                        <strong id="scoreValue">100</strong>
+                    </article>
+                    <article class="metric">
+                        <span>Attempts</span>
+                        <strong id="attemptValue">0</strong>
+                    </article>
+                    <article class="metric">
+                        <span>Range</span>
+                        <strong>1 - 100</strong>
+                    </article>
+                </div>
+
+                <form id="guessForm" class="stack">
+                    <label class="field">
+                        Enter your guess
+                        <input type="number" id="guessInput" min="1" max="100" placeholder="50" required>
+                    </label>
+                    <div class="actions">
+                        <button type="submit">Check guess</button>
+                        <button type="button" id="newGameButton" class="secondary">New game</button>
+                    </div>
+                </form>
+
+                <p id="feedbackMessage" class="message">Try to guess the secret number.</p>
+            </section>
+
+            <section class="panel stack">
+                <p class="section-title">Guess history</p>
+                <ul id="guessHistory" class="guess-list"></ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

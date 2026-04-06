@@ -1,0 +1,22 @@
+@import "../shared-assignment.css";
+
+.history-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.history-entry div {
+    display: grid;
+    gap: 4px;
+}
+
+.history-entry strong {
+    font-variant-numeric: tabular-nums;
+}
+
+.history-entry span {
+    color: var(--muted);
+    font-size: 0.9rem;
+}

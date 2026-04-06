@@ -1,0 +1,12 @@
+@import "../shared-assignment.css";
+
+.guess-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.guess-entry strong {
+    font-variant-numeric: tabular-nums;
+}

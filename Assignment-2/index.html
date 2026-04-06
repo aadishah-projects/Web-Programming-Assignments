@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 - Student Marks and Grade Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Assignment 2</p>
+            <h1>Student Marks and Grade Analyzer</h1>
+            <p class="page-note">Student details are stored as objects, five subject marks are analyzed, and each computed result is added to a table with JavaScript-driven pass or fail highlighting.</p>
+        </section>
+
+        <section class="workspace">
+            <div class="grid-two">
+                <form id="studentForm" class="panel stack">
+                    <p class="section-title">Student entry</p>
+                    <div class="field-grid">
+                        <label class="field">
+                            Student name
+                            <input type="text" id="studentName" placeholder="Aditya Kumar Shah" required>
+                        </label>
+                        <label class="field">
+                            Roll number
+                            <input type="text" id="rollNumber" placeholder="080BCt011" required>
+                        </label>
+                    </div>
+
+                    <div class="field-grid">
+                        <label class="field">
+                            English
+                            <input type="number" class="mark-input" data-subject="English" min="0" max="100" required>
+                        </label>
+                        <label class="field">
+                            Mathematics
+                            <input type="number" class="mark-input" data-subject="Mathematics" min="0" max="100" required>
+                        </label>
+                        <label class="field">
+                            Science
+                            <input type="number" class="mark-input" data-subject="Science" min="0" max="100" required>
+                        </label>
+                        <label class="field">
+                            Computer
+                            <input type="number" class="mark-input" data-subject="Computer" min="0" max="100" required>
+                        </label>
+                        <label class="field">
+                            Social
+                            <input type="number" class="mark-input" data-subject="Social" min="0" max="100" required>
+                        </label>
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit">Analyze student</button>
+                        <button type="reset" class="secondary">Reset form</button>
+                        <button type="button" id="clearResults" class="ghost">Clear table</button>
+                    </div>
+
+                    <p id="marksMessage" class="message">Each subject mark should be between 0 and 100.</p>
+                </form>
+
+                <section class="panel stack">
+                    <p class="section-title">Latest result</p>
+                    <div class="metric-grid">
+                        <article class="metric">
+                            <span>Total</span>
+                            <strong id="latestTotal">--</strong>
+                        </article>
+                        <article class="metric">
+                            <span>Percentage</span>
+                            <strong id="latestPercentage">--</strong>
+                        </article>
+                        <article class="metric">
+                            <span>Grade</span>
+                            <strong id="latestGrade">--</strong>
+                        </article>
+                        <article class="metric">
+                            <span>Result</span>
+                            <strong id="latestResult"><span class="status status-warn">Waiting</span></strong>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <section class="panel stack">
+                <div class="header-row">
+                    <p class="section-title">Result table</p>
+                    <p class="inline-note">Rows are styled through JavaScript by applying pass or fail classes.</p>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Roll</th>
+                                <th>Total</th>
+                                <th>Percentage</th>
+                                <th>Grade</th>
+                                <th>Result</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
